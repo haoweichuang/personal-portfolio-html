@@ -35,6 +35,8 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --theme-color2: hsl(220, 62%, 37%);
+  --hero-banner-img1: url('../images/beauty_1565165555600.JPG');
+  --hero-banner-img2: url('../images/IMG_5819.JPG');
 
   /**
    * typography
@@ -912,9 +914,15 @@ textarea.input-field {
     width: 90%;
     height: 100%;
     background-color: var(--theme-color2);
+    /* background-image: var(--hero-banner-img); */
     z-index: -1;
     transform: rotate(-15deg);
     border-radius: var(--radius-10);
+    background-size: cover; /* 確保圖片覆蓋整個區域 */
+    background-position: center; /* 圖片居中 */
+
+    /* 使用動畫切換背景圖片 */
+    /* animation: swapImages 4s infinite alternate; */
   }
 
   .exp-list .span { --fs-13: 1.4rem; }
@@ -934,6 +942,15 @@ textarea.input-field {
   @keyframes scrollDown {
     0% { transform: translateY(0); }
     30% { transform: translateY(20px); }
+  }
+
+  @keyframes swapImages {
+    0% {
+      background-image: var(--hero-banner-img1);
+    }
+    100% {
+      background-image: var(--hero-banner-img2);
+    }
   }
 
 
