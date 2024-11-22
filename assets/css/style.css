@@ -34,6 +34,7 @@
   --white_10: hsl(0, 0%, 100%, 0.1);
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
+  --theme-color2: hsl(220, 62%, 37%);
 
   /**
    * typography
@@ -493,8 +494,6 @@ body::-webkit-scrollbar-thumb {
 
 
 
-
-
 /*-----------------------------------*\
   #PRICEING
 \*-----------------------------------*/
@@ -882,7 +881,7 @@ textarea.input-field {
    */
 
   .hero {
-    --section-padding: 70px;
+    --section-padding: 80px;
     padding-block-start: calc(var(--section-padding) + 60px);
     min-height: 100vh;
     display: grid;
@@ -912,7 +911,7 @@ textarea.input-field {
     left: -95px;
     width: 90%;
     height: 100%;
-    background-color: var(--theme-color);
+    background-color: var(--theme-color2);
     z-index: -1;
     transform: rotate(-15deg);
     border-radius: var(--radius-10);
@@ -955,13 +954,13 @@ textarea.input-field {
     position: absolute;
     top: 0;
     right: 50px;
-    width: 410px;
-    height: 620px;
-    background-image: url('../images/portfolio-2.jpg');
+    width: 510px;
+    height: 560px;
+    background-image: url('../images/certificate2024-11-22.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: 105%;
-    background-attachment: fixed;
+    background-position: 80%;
+    background-attachment: flex;
     overflow: hidden;
   }
 
@@ -1053,4 +1052,38 @@ textarea.input-field {
 
   .hero-banner { width: 275px; }
 
+}
+
+
+  /**
+   * NEW
+   */
+
+.hidden-content {
+  display: none; /* 默認隱藏 */
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 0.5px solid #ddd;
+  border-radius: 5px;
+  font-size: 0.9em;
+  color: #555;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.hidden-content.show {
+  display: block; /* 顯示展開內容 */
+  max-height: 500px; /* 確保足夠大以容納內容 */
+}
+
+.hidden-content .inner-list {
+  list-style: disc; /* 使用實心圓點作為列點符號 */
+  padding-left: 20px; /* 向右縮進，避免和主列表混淆 */
+  margin-top: 10px;   /* 與內容段落的間距 */
+}
+
+.inner-list li {
+  margin-bottom: 5px; /* 列表項之間的間距 */
 }
